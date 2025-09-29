@@ -30,10 +30,10 @@ function displayLogs(){
   let logs = JSON.parse(localStorage.getItem("logs")) || []; //gets the logs from storage and JSON parses it OR creates an empty array
   const logsContainer = document.getElementById("locationAndTime");
   logsContainer.innerHTML = "";
-  logs.array.forEach(log => {
-    const log = document.create("p");
-    log.textContent = `${log.timestampIso} → ${log.latitude}, ${log.longitude} (±${log.accuracy}m)`;
-    logsContainer.appendChild(item);
+  logs.forEach(log => {
+    const logItem = document.create("p");
+    logItem.textContent = `${log.timestampIso} → ${log.latitude}, ${log.longitude} (±${log.accuracy}m)`;
+    logsContainer.appendChild(logItem);
   });
 }
 
