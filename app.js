@@ -1,8 +1,14 @@
 document.getElementById("getLocationBtn").addEventListener("click", getLocationAndTime);
+document.getElementById("clearLogsBtn").addEventListener("click", getLocationAndTime);
 
 function getLocationAndTime() {
   alert("Button clicked");
   navigator.geolocation.getCurrentPosition(success, error);
+}
+
+function clearLogs() {
+  localStorage.removeItem("logs");
+  displayLogs();
 }
 
 function success(position) {
