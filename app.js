@@ -1,5 +1,8 @@
+document.getElementById("getLocationBtn").addEventListener("click", getLocationAndTime);
+
 function getLocationAndTime() {
-    navigator.geolocation.getCurrentPosition(success, error);
+  alert("Button clicked");
+  navigator.geolocation.getCurrentPosition(success, error);
 }
 
 function success(position) {
