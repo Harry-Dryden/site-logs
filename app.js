@@ -1,5 +1,5 @@
 document.getElementById("getLocationBtn").addEventListener("click", getLocationAndTime);
-document.getElementById("clearLogsBtn").addEventListener("click", getLocationAndTime);
+document.getElementById("clearLogsBtn").addEventListener("click", clearLogs);
 
 function getLocationAndTime() {
   alert("Button clicked");
