@@ -11,7 +11,6 @@ function success(position) {
     timestampIso: new Date().toISOString(),
     notes: ""
   };
-
   saveLog(entry);
   displayLogs();
 }
@@ -34,7 +33,7 @@ function displayLogs(){
   logs.array.forEach(log => {
     const log = document.create("p");
     log.textContent = `${log.timestampIso} → ${log.latitude}, ${log.longitude} (±${log.accuracy}m)`;
-    container.appendChild(item);
+    logsContainer.appendChild(item);
   });
 }
 
