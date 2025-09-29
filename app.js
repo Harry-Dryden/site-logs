@@ -31,7 +31,7 @@ function displayLogs(){
   const logsContainer = document.getElementById("locationAndTime");
   logsContainer.innerHTML = "";
   logs.forEach(log => {
-    const logItem = document.create("p");
+    const logItem = document.createElement("p");
     logItem.textContent = `${log.timestampIso} → ${log.latitude}, ${log.longitude} (±${log.accuracy}m)`;
     logsContainer.appendChild(logItem);
   });
